@@ -26,6 +26,7 @@ package fb.display {
       title = "Facebook Connect Extended Permissions";
       location = "/connect/prompt_permissions.php";
       extraParams["next"] = NextPath + "?xxRESULTTOKENxx";
+      extraParams["session_key"] = FBConnect.session.key;
       extraParams["extern"] = 1;
     }
 

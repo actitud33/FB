@@ -31,6 +31,7 @@ package fb.display {
       extraParams["next"] = NextPath;
       extraParams["return_session"] = true;
       extraParams["cancel_url"] = FailurePath;
+      extraParams["session_key_only"] = true;
       for (var param:String in extra_params) {
         extraParams[param] = extra_params[param];
       }
