@@ -17,6 +17,7 @@
 // Please see FBDialog for more details.
 package fb.display {
   import fb.display.FBDialog;
+  import fb.FBConnect;
   import fb.util.Output;
 
   import flash.events.Event;
