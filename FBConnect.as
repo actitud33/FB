@@ -123,7 +123,7 @@ package fb {
     // Callback on page admin data
     public static function gotAdminInfo(event:FBEvent):void {
       var resultsByKey:Object = FBAPI.multiqueryByKey(event.data);
-
+      
       // Rebuild list of pages we know we can publish to
       adminnedPages = new Array();
       for each (var grantedPage:Object in resultsByKey.grantedPages)
@@ -151,6 +151,7 @@ package fb {
       if (event.data) adminnedPages.push(event.data);
 
       requesting_page = null;
+      dispatcher.dispatchEvent(new FBEvent(FBEvent.RESOLVED));
       dispatcher.dispatchEvent(new FBEvent(FBEvent.PAGE_PERMISSION_CHANGED));
     }
 
